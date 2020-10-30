@@ -1,0 +1,23 @@
+{
+  "name": "pipe-to-logzio",
+  "version": "1.0.0",
+  "description": "Pipe console output to logz.io",
+  "main": "index.js",
+  "bin": {
+    "pipe-to-logzio": "./cli.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "joshwnj",
+  "license": "MIT",
+  "dependencies": {
+    "logzio-nodejs": "^2.0.2",
+    "minimist": "^1.2.5",
+    "pump": "^3.0.0",
+    "split2": "^3.2.2",
+    "strip-ansi": "^6.0.0",
+    "through2": "^4.0.2"
+  }
+}
