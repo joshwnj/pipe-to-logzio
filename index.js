@@ -6,12 +6,14 @@ const logzioNodejs = require('logzio-nodejs');
 module.exports = main
 
 function main (stream, options) {
-  const logger = logzioNodejs.createLogger(options)
+  const logger = options.token ?
+        logzioNodejs.createLogger(options) :
+        null
 
   var myTransport = through(function (chunk, enc, cb) {
     const val = chunk.toString('utf8')
     console.log(val)
-    logger.log(stripAnsi(val))
+    if (logger) { logger.log(stripAnsi(val)) }
     cb()
   })
 
