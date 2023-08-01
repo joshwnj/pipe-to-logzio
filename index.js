@@ -12,7 +12,7 @@ function main (stream, options) {
     return
   }
 
-  console.log('[pipe-to-logzio] token (%s)', options.token)
+  console.log('[pipe-to-logzio] token (%d chars)', options.token.length)
   const logger = logzioNodejs.createLogger(options)
 
   var myTransport = through(function (chunk, enc, cb) {
