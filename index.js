@@ -6,12 +6,13 @@ const logzioNodejs = require('logzio-nodejs');
 module.exports = main
 
 function main (stream, options) {
-  if (!options.token) {
+  if (!options.token) {  
     console.log('[pipe-to-logzio] no token')
     stream.pipe(process.stdout)
     return
   }
 
+  console.log('[pipe-to-logzio] token (%s)', options.token)
   const logger = logzioNodejs.createLogger(options)
 
   var myTransport = through(function (chunk, enc, cb) {
