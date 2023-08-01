@@ -1,6 +1,6 @@
 {
   "name": "pipe-to-logzio",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Pipe console output to logz.io",
   "main": "index.js",
   "bin": {
